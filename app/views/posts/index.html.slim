@@ -1,2 +1,17 @@
-h1 Posts#index
-p Find me in app/views/posts/index.html.slim
+.site-wrapper
+  table
+    thead
+      tr
+        th 投稿ID
+        th タイトル
+        th 本文
+        th ユーザID
+        th 作成日時
+    tbody
+      - @posts.each do |post|
+        tr
+          td.table-narow = post.id
+          td.table-midium = post.title
+          td.table-wide = post.description
+          td.table-narow = 1
+          td.table-midium = post.arrange_created_at
