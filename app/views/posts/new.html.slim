@@ -1,2 +1,8 @@
-h1 Posts#new
-p Find me in app/views/posts/new.html.slim
+= form_with url: posts_path, locale: true do |f|
+  .hoge
+    = f.label :title
+    = f.text_field :title
+  .hoge
+    = f.label :description
+    = f.text_area :description
+    = f.submit '投稿'
