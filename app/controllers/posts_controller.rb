@@ -1,14 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.limit(Post::INDEX_DISPLAY)
+    @posts = Post.last(Post::INDEX_DISPLAY)
   end
 
-  def show
-    @post = Post.find(params[:id])
-  end
-
-  def new
-  end
+  def new; end
 
   def create
     @post = Post.new
@@ -16,7 +11,7 @@ class PostsController < ApplicationController
     @post.description = params[:description]
 
     if @post.save!
-      redirect_to action: "show", id: @post.id
+      redirect_to action: "index"
       flash[:success] = "投稿を作成しました。"
     end
   end

@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ @import "bootstrap";
+ @import "font-awesome";
+
+.site-wrapper{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.form-box{
+  text-align: center;
+}
+
+.form-small{
+  width: 320px;
+  height: 30px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.form-medium{
+  width: 320px;
+  height: 150px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+table {
+  background-color: #beccea;
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+}
+
+tr {
+  border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  color: white;
+  border: 1px solid black;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.table-narow {
+  width: 200px;
+}
+
+.table-midium {
+  width: 400px;
+}
+
+.table-wide {
+  width: 600px;
+}
