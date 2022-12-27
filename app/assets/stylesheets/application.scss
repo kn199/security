@@ -11,14 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap";
- @import "font-awesome";
 
 .site-wrapper{
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .form-box{
@@ -30,6 +26,7 @@
   height: 30px;
   margin: auto;
   margin-top: 10px;
+  border: 1px solid black;
 }
 
 .form-medium{
@@ -37,6 +34,23 @@
   height: 150px;
   margin: auto;
   margin-top: 10px;
+}
+
+#pattern_id_1{
+  margin-bottom: 25px;
+  margin-right: 5px;
+}
+
+#pattern_id_2{
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+
+#pattern_id_3{
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 25px;
 }
 
 table {
@@ -47,17 +61,7 @@ table {
 
 .post-table {
   background-color: #beccea;
-  margin-top: 20px;
-}
-
-.user-table {
-  background-color: #a9a9a9;
-  margin-top: 20px;
-}
-
-.profile-table {
-  background-color: #F0D0D0;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 tr {
@@ -136,24 +140,33 @@ td {
 h1 {
   text-align: center;
   font-size: 18px;
-  margin-top: 25px;
-  margin-bottom: 25px;
   font-weight: 500;
   padding-bottom: 10px;
+  margin: 25px auto 25px auto;
 }
 
 .color-blue {
+  width: 320px;
   color: #6594e0;
   border-bottom: dashed 2px #6594e0;
 }
 
-.color-gray {
-  color: #808080;
-  border-bottom: dashed 2px #808080;
+.color-blue-wide {
+  width: 500px;
+  color: #6594e0;
+  border-bottom: dashed 2px #6594e0;
 }
 
-.color-red {
-  color: #FF6633;
-  border-bottom: dashed 2px #FF6633;
+.button{
+  border-radius: 5px;
+  color: #0d6efd;
+  background-color: white;
+  width: 180px;
+  height: 35px;
 }
 
+.button:hover{
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+}
