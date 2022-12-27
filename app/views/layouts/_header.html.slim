@@ -1,4 +1,5 @@
 .header
+  = link_to('データベース', introductions_path, { class: "header-links" })
   - if @current_user
     = link_to('投稿作成', new_post_path, { class: "header-links" })
     = link_to('投稿一覧', posts_path, { class: "header-links" })

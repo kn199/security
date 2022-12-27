@@ -1,0 +1,54 @@
+.site-wrapper
+  h1.color-gray ユーザ一覧
+  table.user-table
+    thead
+      tr
+        th ID
+        th 名前
+        th Eメール
+        th パスワード
+        th 登録日時
+    tbody
+      - @users.each do |user|
+        tr
+          td.table-narrow = user.id
+          td.table-narrow = user.name
+          td.table-midium = user.email
+          td.table-narrow = user.password
+          td.table-wide = user.arrange_created_at
+
+  h1.color-red 個人情報一覧
+  table.profile-table
+    thead
+      tr
+        th ID
+        th ユーザID
+        th TEL
+        th 住所
+        th 登録日時
+    tbody
+      - @profiles.each do |profile|
+        tr
+          td.table-narrow = profile.id
+          td.table-narrow = profile.user_id
+          td.table-midium = profile.tel
+          td.table-wide = profile.address
+          td.table-midium = profile.arrange_created_at
+
+  h1.color-blue 投稿一覧
+  table.post-table
+    thead
+      tr
+        th ID
+        th ユーザID
+        th タイトル
+        th 本文
+        th 作成日時
+    tbody
+      - @posts.each do |post|
+        tr
+          td.table-narrow = post.id
+          td.table-narrow = post.user_id
+          td.table-midium = post.title
+          td.table-wide = post.description
+          td.table-midium = post.arrange_created_at
