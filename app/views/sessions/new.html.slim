@@ -1,0 +1,13 @@
+.site-wrapper
+  .form-box
+    div
+    = form_with url: sessions_path, locale: true do |f|
+      div.form-title
+        = fa_icon("envelope")
+        '  Eメール
+      p = f.email_field :email, value: @user&.email, class: "form-small"
+      div
+        = fa_icon("key")
+        '  パスワード
+      p = f.password_field :password, value: @user&.password, class: "form-small"
+      p = f.submit 'ログイン', class: "btn btn-outline-primary"
