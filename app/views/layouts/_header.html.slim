@@ -1,0 +1,8 @@
+.header
+  - if @current_user
+    = link_to('投稿作成', new_post_path, { class: "header-links" })
+    = link_to('投稿一覧', posts_path, { class: "header-links" })
+    .header-links
+      = link_to('ログアウト', {controller: "sessions", action: "destroy"}, {method: :delete })
+  - else
+    = link_to('ログイン', new_sessions_path, { class: "header-links" })
